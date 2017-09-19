@@ -18,6 +18,7 @@ namespace Vidly.Controllers
             IndexCountriesViewModel icvm = new IndexCountriesViewModel();
             icvm.Name = "Current List of Countries";
 
+
             try
             {
                 icvm.Countries = client.GetCountries().ToList();
