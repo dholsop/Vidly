@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:61980/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:61980/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:61980/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfReturnsService1" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountries" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountry" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLineItemRefs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineItemRefs" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLineItemRefs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineItemRefsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLineItemRef_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineItemRef" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLineItemRef_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineItemRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateLineItemRef_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLineItemRef" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateLineItemRef_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLineItemRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteLineItemRef_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLineItemRef" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteLineItemRef_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLineItemRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCountry" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCountry" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateLineItemRef_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLineItemRef" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateLineItemRef_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLineItemRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCountry" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCountryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetCountries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCountries" message="tns:IService1_GetCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCountriesResponse" message="tns:IService1_GetCountries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCountry" message="tns:IService1_GetCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCountryResponse" message="tns:IService1_GetCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineItemRefs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetLineItemRefs" message="tns:IService1_GetLineItemRefs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetLineItemRefsResponse" message="tns:IService1_GetLineItemRefs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineItemRef">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetLineItemRef" message="tns:IService1_GetLineItemRef_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetLineItemRefResponse" message="tns:IService1_GetLineItemRef_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateLineItemRef">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateLineItemRef" message="tns:IService1_CreateLineItemRef_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateLineItemRefResponse" message="tns:IService1_CreateLineItemRef_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLineItemRef">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteLineItemRef" message="tns:IService1_DeleteLineItemRef_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteLineItemRefResponse" message="tns:IService1_DeleteLineItemRef_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateCountry" message="tns:IService1_CreateCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateCountryResponse" message="tns:IService1_CreateCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteCountry" message="tns:IService1_DeleteCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteCountryResponse" message="tns:IService1_DeleteCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLineItemRef">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateLineItemRef" message="tns:IService1_UpdateLineItemRef_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateLineItemRefResponse" message="tns:IService1_UpdateLineItemRef_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateCountry" message="tns:IService1_UpdateCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateCountryResponse" message="tns:IService1_UpdateCountry_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCountries">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountry">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineItemRefs">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetLineItemRefs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineItemRef">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetLineItemRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateLineItemRef">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateLineItemRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLineItemRef">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteLineItemRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCountry">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCountry">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLineItemRef">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateLineItemRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCountry">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:61980/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,98 @@
+﻿@model Vidly.ViewModels.IndexCountriesViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => Model.ForHeadings.CountryISO2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model.ForHeadings.CountryISO3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model.ForHeadings.CountryISONum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model.ForHeadings.CountryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model.ForHeadings.CountryRepCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model.ForHeadings.CurrencyID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model.ForHeadings.EffDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model.ForHeadings.EndEffDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model.ForHeadings.RegionID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model.ForHeadings.Supported)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model.ForHeadings.TAIDCountry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model.ForHeadings.TAIDGlobal)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Countries)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryISO2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryISO3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryISONum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryRepCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrencyID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EffDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndEffDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegionID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supported)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TAIDCountry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TAIDGlobal)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfReturnsService1" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfReturnsService1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfVATCountryDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VATCountryDTO" nillable="true" type="tns:VATCountryDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVATCountryDTO" nillable="true" type="tns:ArrayOfVATCountryDTO" />
+  <xs:complexType name="VATCountryDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountryISO2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryISO3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryISONum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryRepCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyID" type="xs:int" />
+      <xs:element minOccurs="0" name="EffDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndEffDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RegionID" type="xs:int" />
+      <xs:element minOccurs="0" name="Supported" type="xs:int" />
+      <xs:element minOccurs="0" name="TAIDCountry" type="xs:int" />
+      <xs:element minOccurs="0" name="TAIDGlobal" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VATCountryDTO" nillable="true" type="tns:VATCountryDTO" />
+  <xs:complexType name="ArrayOfVATLineItemRefDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VATLineItemRefDTO" nillable="true" type="tns:VATLineItemRefDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVATLineItemRefDTO" nillable="true" type="tns:ArrayOfVATLineItemRefDTO" />
+  <xs:complexType name="VATLineItemRefDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="VATLineItemRefCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VATLineItemRefDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VATLineItemRefID" type="xs:int" />
+      <xs:element minOccurs="0" name="VATLineItemRefJurisdictionReportCodes" nillable="true" type="tns:ArrayOfVATLineItemRefJurisdictionReportCodeDTO" />
+      <xs:element minOccurs="0" name="VATLineItemRefJurisdictions" nillable="true" type="tns:ArrayOfVATLineItemRefJurisdictionDTO" />
+      <xs:element minOccurs="0" name="VATLineItemRefText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VATLineItemRefType" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VATLineItemRefDTO" nillable="true" type="tns:VATLineItemRefDTO" />
+  <xs:complexType name="ArrayOfVATLineItemRefJurisdictionReportCodeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VATLineItemRefJurisdictionReportCodeDTO" nillable="true" type="tns:VATLineItemRefJurisdictionReportCodeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVATLineItemRefJurisdictionReportCodeDTO" nillable="true" type="tns:ArrayOfVATLineItemRefJurisdictionReportCodeDTO" />
+  <xs:complexType name="VATLineItemRefJurisdictionReportCodeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EffDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndEffDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReportCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportCodeDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportCodeDescriptionNative1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportCodeDescriptionNative2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportCodeDescriptionNative3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TAIDCountry" type="xs:int" />
+      <xs:element minOccurs="0" name="TAIDGlobal" type="xs:int" />
+      <xs:element minOccurs="0" name="TAIDJurisdiction" type="xs:int" />
+      <xs:element minOccurs="0" name="VATLineItemRefID" type="xs:int" />
+      <xs:element minOccurs="0" name="VATLineItemRef_VATLineItemRefID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VATLineItemRefJurisdictionReportCodeDTO" nillable="true" type="tns:VATLineItemRefJurisdictionReportCodeDTO" />
+  <xs:complexType name="ArrayOfVATLineItemRefJurisdictionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VATLineItemRefJurisdictionDTO" nillable="true" type="tns:VATLineItemRefJurisdictionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVATLineItemRefJurisdictionDTO" nillable="true" type="tns:ArrayOfVATLineItemRefJurisdictionDTO" />
+  <xs:complexType name="VATLineItemRefJurisdictionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EffDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndEffDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TAIDCountry" type="xs:int" />
+      <xs:element minOccurs="0" name="TAIDGlobal" type="xs:int" />
+      <xs:element minOccurs="0" name="TAIDJurisdiction" type="xs:int" />
+      <xs:element minOccurs="0" name="TaxCodeID" type="xs:int" />
+      <xs:element minOccurs="0" name="VATLineItemRefID" type="xs:int" />
+      <xs:element minOccurs="0" name="VATLineItemRef_VATLineItemRefID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VATLineItemRefJurisdictionDTO" nillable="true" type="tns:VATLineItemRefJurisdictionDTO" />
+</xs:schema>
